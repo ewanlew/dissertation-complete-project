@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:cv="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scheduleRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:id="@+id/todayScheduleContainer"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.2"
+        android:orientation="vertical"
+        android:paddingEnd="6dp"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <!-- return card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/returnToRoomCard"
+            style="@style/cardStandard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardCornerRadius="4dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginVertical="8dp">
+
+                <TextView
+                    style="@style/smallBodyText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dmsans_black"
+                    android:text="@string/leftArrow"
+                    android:layout_marginStart="12dp" />
+
+                <TextView
+                    style="@style/smallBodyText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dmsans_semibold"
+                    android:text="@string/backToRoom"
+                    android:textAlignment="center" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- today schedule -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/cardStandard"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/todayTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:text="@string/today"
+                    android:textAlignment="center"
+                    style="@style/largeBody"
+                    android:fontFamily="@font/dmsans_extrabold"
+                    android:layout_marginBottom="8dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/todayScheduleRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:layout_weight="1"
+                    android:clipToPadding="false"
+                    tools:listitem="@layout/view_calendar_day" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- key + calendar info card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/cardStandard"
+            app:cardUseCompatPadding="true"
+            android:layout_marginTop="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginEnd="6dp"
+                            android:backgroundTint="@color/calendar_red"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/rounded_square" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/smallBodyText"
+                            android:text="@string/booked"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginEnd="6dp"
+                            android:backgroundTint="@color/calendar_orange"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/rounded_square" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/smallBodyText"
+                            android:text="@string/pending"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingStart="20dp"
+                    style="@style/smallBodyText"
+                    android:fontFamily="@font/dmsans_semibold"
+                    android:text="@string/tapAnywhere"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/weekViewContainer"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/cardStandard">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="8dp">
+
+                    <TextView
+                        android:id="@+id/roomScheduleTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/thisWeek"
+                        android:textAlignment="center"
+                        android:paddingVertical="8dp"
+                        style="@style/largeBody"
+                        android:fontFamily="@font/dmsans_extrabold"
+                        android:layout_marginBottom="8dp" />
+
+                        <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginBottom="-11dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:layout_marginTop="60dp"
+                                android:text="@string/time8am"
+                                style="@style/smallBodyText"
+                                android:textSize="16sp"
+                                android:gravity="end"
+                                android:paddingHorizontal="8dp"
+                                android:layout_marginBottom="2dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/time9am"
+                                style="@style/smallBodyText"
+                                android:textSize="16sp"
+                                android:gravity="end"
+                                android:paddingHorizontal="8dp"
+                                android:layout_marginBottom="3dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/time10am"
+                                style="@style/smallBodyText"
+                                android:textSize="16sp"
+                                android:gravity="end"
+                                android:paddingHorizontal="8dp"
+                                android:layout_marginBottom="3dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/time11am"
+                                style="@style/smallBodyText"
+                                android:textSize="16sp"
+                                android:gravity="end"
+                                android:paddingHorizontal="8dp"
+                                android:layout_marginBottom="3dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/time12pm"
+                                style="@style/smallBodyText"
+                                android:textSize="16sp"
+                                android:gravity="end"
+                                android:paddingHorizontal="8dp"
+                                android:layout_marginBottom="3dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/time1pm"
+                                style="@style/smallBodyText"
+                                android:textSize="16sp"
+                                android:gravity="end"
+                                android:paddingHorizontal="8dp"
+                                android:layout_marginBottom="3dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/time2pm"
+                                style="@style/smallBodyText"
+                                android:textSize="16sp"
+                                android:gravity="end"
+                                android:paddingHorizontal="8dp"
+                                android:layout_marginBottom="3dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/time3pm"
+                                style="@style/smallBodyText"
+                                android:textSize="16sp"
+                                android:gravity="end"
+                                android:paddingHorizontal="8dp"
+                                android:layout_marginBottom="3dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/time4pm"
+                                style="@style/smallBodyText"
+                                android:textSize="16sp"
+                                android:gravity="end"
+                                android:paddingHorizontal="8dp"
+                                android:layout_marginBottom="3dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/time5pm"
+                                style="@style/smallBodyText"
+                                android:textSize="16sp"
+                                android:gravity="end"
+                                android:paddingHorizontal="8dp"
+                                android:layout_marginBottom="3dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/time6pm"
+                                style="@style/smallBodyText"
+                                android:textSize="16sp"
+                                android:gravity="end"
+                                android:paddingHorizontal="8dp"
+                                android:layout_marginBottom="3dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/time7pm"
+                                style="@style/smallBodyText"
+                                android:textSize="16sp"
+                                android:gravity="end"
+                                android:paddingHorizontal="8dp"
+                                android:layout_marginBottom="3dp"/>
+
+                        </LinearLayout>
+                        <com.kizitonwose.calendar.view.WeekCalendarView
+                            android:id="@+id/calendarView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:cv_dayViewResource="@layout/view_calendar_day"
+                            app:cv_daySize="rectangle" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

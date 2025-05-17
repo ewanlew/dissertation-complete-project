@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="xLargeTitle">
+        <item name="android:textSize">90sp</item>
+        <item name="android:fontFamily">@font/dmsans_black</item>
+    </style>
+
+    <style name="largeTitle">
+        <item name="android:textSize">76sp</item>
+        <item name="android:fontFamily">@font/dmsans_black</item>
+    </style>
+
+    <style name="mainTitle">
+        <item name="android:textSize">60sp</item>
+        <item name="android:fontFamily">@font/dmsans_extrabold</item>
+    </style>
+
+    <style name="subTitle">
+        <item name="android:textSize">48sp</item>
+        <item name="android:fontFamily">@font/dmsans_bold</item>
+    </style>
+
+    <style name="largeBody">
+        <item name="android:textSize">40sp</item>
+        <item name="android:fontFamily">@font/dmsans_regular</item>
+    </style>
+
+    <style name="bodyText">
+        <item name="android:textSize">32sp</item>
+        <item name="android:fontFamily">@font/dmsans_regular</item>
+    </style>
+
+    <style name="smallBodyText">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/dmsans_regular</item>
+    </style>
+
+    <style name="cardTitle">
+        <item name="android:textSize">32sp</item>
+        <item name="android:fontFamily">@font/dmsans_semibold</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="smallCardContent">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/dmsans_regular</item>
+    </style>
+
+    <style name="roundedImage">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="cardConfirm">cardConfirm</style>
+
+</resources>

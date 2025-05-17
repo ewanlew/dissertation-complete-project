@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primary_text">#FF000000</color>
+
+    <color name="border_action_needed">#A020F0</color>
+    <color name="admin_button">#FF0000</color>
+
+    <color name="light_background">#FAFAFA</color>
+    <color name="dark_background">#121212</color>
+
+    <color name="light_card_colour">#f0f0f0</color>
+    <color name="dark_card_colour">#1f1f1f</color>
+
+    <color name="light_subcard_color">#e8e8e8</color>
+    <color name="dark_subcard_color">#292929</color>
+
+    <color name="light_confirmcard_color">#93db9e</color>
+    <color name="light_rejectcard_color">#db9393</color>
+
+    <color name="dark_confirmcard_color">#37523b</color>
+    <color name="dark_rejectcard_color">#523737</color>
+
+    <color name="light_primary_text">#FF000000</color>
+    <color name="dark_primary_text">#FFFFFFFF</color>
+
+    <color name="calendar_divider">#33000000</color>
+    <color name="calendar_red">#EE4B2B</color>
+    <color name="calendar_orange">#eead2b</color>
+
+<!--    room view -->
+    <color name="waiting_bg">#4f4f4f</color>"
+    <color name="waiting_border">#303030</color>
+
+    <color name="available_bg">#119400</color>
+    <color name="available_border">#004200</color>
+
+    <color name="near_bg">#946f00</color>
+    <color name="near_border">#423000</color>
+
+    <color name="occupied_bg">#940000</color>
+    <color name="occupied_border">#420000</color>
+</resources>

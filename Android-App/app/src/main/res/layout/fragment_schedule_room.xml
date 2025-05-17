@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:scrollbars="none"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/popupRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="24dp"
+        android:gravity="center">
+
+    <LinearLayout
+        android:id="@+id/leftContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_weight="0.8"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:paddingHorizontal="2dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/cardStandard"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    style="@style/subTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/basicInfo"
+                    android:textAlignment="center"
+                    android:paddingBottom="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/purposeText"
+                        style="@style/smallBodyText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/dmsans_semibold"
+                        android:gravity="start|center_vertical"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/bookingTitle" />
+
+                    <EditText
+                        android:id="@+id/purposeEntry"
+                        style="@style/smallBodyText"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2" />
+                    <TextView
+                        android:id="@+id/asteriskBooking"
+                        style="@style/smallBodyText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/dmsans_semibold"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:gravity="start|center_vertical"
+                        android:paddingHorizontal="4dp"
+                        android:text="@string/asterisk" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/emailText"
+                        style="@style/smallBodyText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/dmsans_semibold"
+                        android:gravity="start|center_vertical"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/yourEmail" />
+
+                    <EditText
+                        android:id="@+id/emailEntry"
+                        style="@style/smallBodyText"
+                        android:inputType="textEmailAddress"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2" />
+                    <TextView
+                        android:id="@+id/asteriskEmail"
+                        style="@style/smallBodyText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/dmsans_semibold"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:gravity="start|center_vertical"
+                        android:paddingHorizontal="4dp"
+                        android:text="@string/asterisk"/>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/attendeesText"
+                        style="@style/smallBodyText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/dmsans_semibold"
+                        android:gravity="start|center_vertical"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/numberOfAttendees" />
+
+                    <EditText
+                        android:id="@+id/atendeesEntry"
+                        style="@style/smallBodyText"
+                        android:inputType="number"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2" />
+                    <TextView
+                        android:id="@+id/asteriskAttendees"
+                        style="@style/smallBodyText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/dmsans_semibold"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:gravity="start|center_vertical"
+                        android:paddingHorizontal="4dp"
+                        android:text="@string/asterisk"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/cardStandard"
+            app:cardUseCompatPadding="true"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    style="@style/subTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/roomInfo"
+                    android:textAlignment="center"
+                    android:paddingBottom="10dp"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/roomBeingBookedText"
+                        style="@style/smallBodyText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/dmsans_semibold"
+                        android:gravity="start|center_vertical"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/roomBeingBooked" />
+
+                    <TextView
+                        android:id="@+id/roomBeingBookedLabel"
+                        style="@style/smallBodyText"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:text="@string/roomNumber" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/startTimeText"
+                        style="@style/smallBodyText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/dmsans_semibold"
+                        android:gravity="start|center_vertical"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/startingDate" />
+
+                    <EditText
+                        android:id="@+id/startTimeEntry"
+                        style="@style/smallBodyText"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:inputType="none"
+                        android:layout_weight="2" />
+
+                    <TextView
+                        android:id="@+id/asteriskTime"
+                        style="@style/smallBodyText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/dmsans_semibold"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:gravity="start|center_vertical"
+                        android:paddingHorizontal="4dp"
+                        android:text="@string/asterisk"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/endingTimeText"
+                        style="@style/smallBodyText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/dmsans_semibold"
+                        android:gravity="start|center_vertical"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/endingDate" />
+
+                    <EditText
+                        android:id="@+id/endingTimeEntry"
+                        style="@style/smallBodyText"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:inputType="none"
+                        android:layout_weight="2" />
+                    <TextView
+                        android:id="@+id/asteriskEndTime"
+                        style="@style/smallBodyText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/dmsans_semibold"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:gravity="start|center_vertical"
+                        android:paddingHorizontal="4dp"
+                        android:text="@string/asterisk"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/agreeToRules"
+                        style="@style/smallBodyText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/dmsans_semibold"
+                        android:gravity="start|center_vertical"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/agreeToRules" />
+
+                    <CheckBox
+                        android:id="@+id/agreeToRulesEntry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+
+                    <TextView
+                        android:id="@+id/asteriskAgreement"
+                        style="@style/smallBodyText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/dmsans_semibold"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:gravity="start|center_vertical"
+                        android:paddingHorizontal="4dp"
+                        android:text="@string/asterisk"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/btnCancel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/smallBodyText"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/dmsans_bold"
+                        android:text="@string/cancel"
+                        android:layout_margin="4dp"/>
+
+                    <Button
+                        android:id="@+id/btnSubmit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/smallBodyText"
+                        android:enabled="false"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/dmsans_bold"
+                        android:text="@string/submit"
+                        android:layout_margin="4dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/cardStandard"
+            app:cardUseCompatPadding="true"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/errorMsg"
+                style="@style/smallBodyText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="24dp"
+                android:textColor="@android:color/holo_red_dark"
+                android:fontFamily="@font/dmsans_semibold"
+                android:gravity="start|center_vertical"
+                android:paddingHorizontal="10dp"
+                android:text="@string/rulesForBook" />
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rightContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingHorizontal="2dp"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/cardStandard"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    style="@style/subTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bookingAgreement"
+                    android:textAlignment="center"
+                    android:paddingBottom="10dp"/>
+
+                <TextView
+                    style="@style/smallBodyText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/standardBookingRulesContent"
+                    android:textAlignment="textStart"
+                    android:paddingHorizontal="10dp"
+                    android:paddingBottom="10dp"/>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/cardStandard"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/subTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/riskEvaluation"
+                        android:textAlignment="center"
+                        android:paddingBottom="10dp"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:id="@+id/asteriskEval"
+                        style="@style/smallBodyText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/dmsans_semibold"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:gravity="start|center_vertical"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/asterisk"/>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/riskEvaluationEntry"
+                    style="@style/smallBodyText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textMultiLine"
+                    android:hint="@string/riskEvaluationContext"
+                    android:textColorHint="@color/primary_text"
+                    android:gravity="top|start"
+                    android:lines="12"/>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>

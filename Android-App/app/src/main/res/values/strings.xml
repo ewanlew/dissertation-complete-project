@@ -1,0 +1,116 @@
+<resources>
+    <string name="app_name">Wall Scheduler</string>
+
+    <!-- Building View -->
+    <string name="room_scheduler">Room Scheduler Setup</string>
+    <string name="which_building">Which building?</string>
+    <string name="which_room">Which room?</string>
+    <string name="admin_signin">Admin Sign In</string>
+    <string name="username">Username:</string>
+    <string name="password">Password:</string>
+    <string name="signin">Sign In</string>
+    <string name="greatHall">Great\nHall</string>
+    <string name="computationalFoundry">Computational\nFoundry</string>
+    <string name="engineeringCentral">Engineering\nCentral</string>
+    <string name="openAdminView">Open Admin View</string>
+
+    <!-- Rooms -->
+    <string name="room_name">Room Name</string>
+    <string name="room_id">Db ID: #</string>
+    <string name="search_room">Search Rooms…</string>
+
+    <!-- Room View -->
+    <string name="waiting">Waiting…</string>
+    <string name="syncing_db">Syncing with database…</string>
+    <string name="available">Room Available</string>
+    <string name="near">Room In Use Soon</string>
+    <string name="occupied">Room Occupied</string>
+    <string name="current_date">06 May 2025</string>
+    <string name="current_time">11:00</string>
+    <string name="view_schedule">View Schedule</string>
+    <string name="roomNumber">Room 000</string>
+    <string name="still_syncing">Just a moment…</string>
+
+    <string name="statusDescNextMeeting">Next meeting begins in %1$s minutes</string>
+    <string name="statusDescNextMeetingDay">Next meeting is at %1$s</string>
+    <string name="statusDescStartsIn">Starts in %1$d minutes</string>
+    <string name="statusDescNoMeetings">No upcoming meetings</string>
+    <string name="statusDescCurrentTimeframe">%1$s - %2$s</string>
+
+    <string name="passwordRequired">Passcode Required to Leave Room</string>
+    <string name="passcodeHint">Enter Passcode</string>
+
+    <!-- Schedule View -->
+    <string name="today">Today</string>
+    <string name="thisWeek">Week View</string>
+    <string name="leftArrow">←</string>
+    <string name="backToRoom">Back To Room</string>
+    <string name="roomSchedule">Week View - %1$s</string>
+    <string name="time8am">08:00</string>
+    <string name="time9am">09:00</string>
+    <string name="time10am">10:00</string>
+    <string name="time11am">11:00</string>
+    <string name="time12pm">12:00</string>
+    <string name="time1pm">13:00</string>
+    <string name="time2pm">14:00</string>
+    <string name="time3pm">15:00</string>
+    <string name="time4pm">16:00</string>
+    <string name="time5pm">17:00</string>
+    <string name="time6pm">18:00</string>
+    <string name="time7pm">19:00</string>
+
+    <string name="basicInfo">Basic Info</string>
+    <string name="bookingTitle">Booking Title:</string>
+    <string name="yourEmail">Your Email Address:</string>
+    <string name="numberOfAttendees">Number of Attendees:</string>
+    <string name="roomInfo">Room Info</string>
+    <string name="roomBeingBooked">Room Number:</string>
+    <string name="startingDate">Starting Date and Time:</string>
+    <string name="endingDate">Ending Date and Time:</string>
+    <string name="agreeToRules">Do you agree to the booking agreement?</string>
+    <string name="bookingAgreement">Booking Agreement</string>
+    <string name="standardBookingRules">Standard Booking Rules</string>
+    <string name="standardBookingRulesContent">
+        1. You will respect the space and institution as if it were yours, and not cause any damage to the room.
+        \n2. You will leave the room in the same condition it was found in.
+        \n3. Unless permission is granted, food and drink will not be consumed in the space.
+        \n4. Volume from any devices and people must be kept to a minimum.
+    </string>
+    <string name="riskEvaluation">Risk Evaluation</string>
+    <string name="riskEvaluationContext">What will happen during the booking…?</string>
+    <string name="asterisk">*</string>
+
+    <string name="rulesForBook">Time must not overlap another booking.
+        Time must end after it starts. Booking must be between 8:00–19:00.</string>
+
+    <string name="submit">Submit</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="tapAnywhere">Tap anywhere on the calendar to book!</string>
+    <string name="booked">Booked</string>
+    <string name="pending">Pending</string>
+
+    <!-- Admin View -->
+    <string name="settings">Settings</string>
+    <string name="requirePasscode">Require passcode to leave room view</string>
+    <string name="passcodeLabel">Passcode:</string>
+    <string name="apply">Apply</string>
+    <string name="back">Back</string>
+
+    <string name="pendingRequests">Pending Requests</string>
+
+    <string name="bookingDetails">Booking Details</string>
+    <string name="selectBookingPrompt">Select a booking to view details.</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+    <string name="riskEvaluationAppearsHere">Risk evaluation appears here.</string>
+
+    <string name="bookingConfirmation">Your booking has been confirmed, and is now pending approval.</string>
+    <string name="checkEmail">Check your email for details.</string>
+    <string name="okay">Okay</string>
+
+    <!-- Content Description -->
+    <string name="cdSchedule">Calendar Icon</string>
+
+
+</resources>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/backBorder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/waiting_border">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_waiting">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center_horizontal">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/currentDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:layout_marginStart="40dp"
+                    style="@style/largeBody"
+                    android:fontFamily="@font/dmsans_semibold"
+                    android:text="@string/current_date"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/currentTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:layout_marginEnd="40dp"
+                    style="@style/largeBody"
+                    android:fontFamily="@font/dmsans_semibold"
+                    android:text="@string/current_time"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="120dp" />
+
+            <TextView
+                android:id="@+id/roomNumber"
+                style="@style/subTitle"
+                android:paddingBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="@string/roomNumber"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/roomStatus"
+                style="@style/xLargeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="15dp"
+                android:textAlignment="center"
+                android:background="@color/waiting_border"
+                android:elevation="4dp"
+                android:text="@string/waiting"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/roomStatusDescription"
+                android:textAlignment="center"
+                android:layout_marginTop="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/syncing_db"
+                android:maxLines="2"
+                android:textColor="@color/white"
+                android:fontFamily="@font/dmsans_bold"
+                style="@style/largeBody" />
+            <TextView
+                android:id="@+id/roomStatusSubtext"
+                android:textAlignment="center"
+                android:layout_margin="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/still_syncing"
+                android:textColor="@color/white"
+                android:maxLines="2"
+                style="@style/bodyText" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="140dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/scheduleCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="30dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/waiting_border"
+                app:cardCornerRadius="8dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="4dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="6dp"
+                        android:contentDescription="@string/cdSchedule"
+                        android:src="@drawable/baseline_calendar_view_week_32" />
+
+                    <TextView
+                        android:id="@+id/txtSchedule"
+                        style="@style/smallBodyText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="8dp"
+                        android:text="@string/view_schedule"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
